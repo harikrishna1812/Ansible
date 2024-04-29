@@ -1,0 +1,24 @@
+<Company>
+   <Employee1>
+      <FirstName>Tanmay</FirstName>
+      <LastName>Patil</LastName>
+      <ContactNo>1234567890</ContactNo>
+      <Email>tanmaypatil@xyz.com</Email>
+      <Address>
+         <City>Bangalore</City>
+         <State>Karnataka</State>
+         <Zip>560212</Zip>
+      </Address>
+   </Employee1>
+   <Employee2>
+      <FirstName>Tanmay</FirstName>
+      <LastName>Patil</LastName>
+      <ContactNo>1234567890</ContactNo>
+      <Email>tanmaypatil@xyz.com</Email>
+      <Address>
+         <City>Bangalore</City>
+         <State>Karnataka</State>
+         <Zip>560212</Zip>
+      </Address>
+   </Employee2>
+</Company>
