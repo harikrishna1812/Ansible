@@ -1,0 +1,10 @@
+- name: printg the variables from 
+  hosts: localhost
+  vars_prompt:
+  - prompt:
+     - name: USERNAME
+     - passwd: passwd
+  tasks:
+    - name: printg the prompt varibles
+      ansible.builtin.debug:
+        msg: " printing {{USERNAME}}  is {{passwd}}"
