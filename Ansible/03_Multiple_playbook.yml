@@ -3,12 +3,19 @@
   tasks:
   - name: printing the play1 messange
     ansible.builtin.debug:
-      msg: "Hi iam play2 and tasks 1"
+      msg: "Hi iam play1 and tasks 1"
 
 - name: play2 and tasks1
-  #hosts: web
+  hosts: web
   tasks:
   - name: printing the play2 messange
     ansible.builtin.debug:
       msg: "Hi iam play2 and tasks 1"
+
+- name: play3 and tasks1
+  hosts: localhost
+  tasks:
+  - name: printing the play2 messange
+    ansible.builtin.debug:
+      msg: "Hi iam play3 and tasks 1"      
 
