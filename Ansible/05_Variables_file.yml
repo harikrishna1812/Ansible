@@ -2,7 +2,7 @@
   hosts: localhost
   vars_files:
     -variables_1.yml
-  task:
+  tasks:
     - name: printing the variable 
       ansible.builtin.debug:
         msg: "hi this is {{name }} learing {{coureses}} and my age is {{age}}"
