@@ -1,0 +1,5 @@
+- name: Example from an Ansible Playbook
+  hosts: web 
+
+- name: Induce an exception to see what happens
+  ansible.builtin.ping:
