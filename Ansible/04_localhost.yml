@@ -8,4 +8,4 @@
   tasks:
   - name: printing the play2 messange
     ansible.builtin.debug:
-      msg: "Hi this is {{name}} learning {{courses}} and my age is {{age}}" 
+      msg: "Hi this is {{name}} learning {{course}} and my age is {{age}}" 
