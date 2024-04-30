@@ -1,7 +1,7 @@
-- name : installation of nginx
-  host: web
+- name: installation of nginx
+  hosts: web
   become: yes
-  task : 
+  task: 
   - name: install nginx
     ansible.built.dnf:
       name: nginx 
