@@ -6,11 +6,11 @@
     age: "41"
 
   tasks:
-  - name: printing the play2 messange
+  - name: printing the tasklevel messange
     vars:
       name: "Aakarsh"
     ansible.builtin.debug:
       msg: "Hi this is {{name}} learning {{course}} and my age is {{age}}" 
-  - name: printing the play2 messange
+  - name: printing the play level messange
     ansible.builtin.debug:
       msg: "Hi this is {{name}} learning {{course}} and my age is {{age}}"     
