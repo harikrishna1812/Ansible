@@ -12,11 +12,11 @@
       state: started
       enabled: yes
   - name: ensure apache is at the latest version
-    yum:
+    ansible.builtin.dnf:
       name: httpd
       state: latest
   - name: ensure apache is running
-    service:
+    ansible.builtin.service:
       name: httpd
       state: started 
       enabled: yes   
