@@ -3,7 +3,7 @@
   vars_prompt:
   - name: USERNAME
     prompt: Please enter your name
-  - passwd: passwd
+  - name: passwd
     prompt: Please enter your name
   tasks:
     - name: printg the prompt varibles
