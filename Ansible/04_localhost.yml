@@ -1,0 +1,6 @@
+- name: play3 and tasks1
+  hosts: localhost
+  tasks:
+  - name: printing the play2 messange
+    ansible.builtin.debug:
+      msg: "Hi iam play3 and tasks 1" 
