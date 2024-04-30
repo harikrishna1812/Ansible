@@ -18,7 +18,8 @@
   - name: ensure apache is running
     service:
       name: httpd
-      state: started    
+      state: started 
+      enabled: yes   
   # - name: install alfresco
   #   ansible.builtin.dnf:
   #     name: nginx 
