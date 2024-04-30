@@ -1,0 +1,9 @@
+- name : installation of nginx
+  host : web
+  task : 
+  - name: install nginx
+      apt: name=nginx state=latest
+  - name: start nginx
+      service:
+      name: nginx
+      state: started
