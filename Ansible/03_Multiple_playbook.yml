@@ -6,7 +6,7 @@
       msg: "Hi iam play2 and tasks 1"
 
 - name: play2 and tasks1
-  hosts: web
+  #hosts: web
   tasks:
   - name: printing the play2 messange
     ansible.builtin.debug:
