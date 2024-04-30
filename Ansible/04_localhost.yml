@@ -7,5 +7,10 @@
 
   tasks:
   - name: printing the play2 messange
+    vars:
+      name: "Aakarsh"
     ansible.builtin.debug:
       msg: "Hi this is {{name}} learning {{course}} and my age is {{age}}" 
+  - name: printing the play2 messange
+    ansible.builtin.debug:
+      msg: "Hi this is {{name}} learning {{course}} and my age is {{age}}"     
