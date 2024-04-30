@@ -1,0 +1,13 @@
+-name: play1 and tasks
+  hosts: web
+  tasks:
+  - name: printing the play1 messange
+    ansible.builtin.debug:
+      msg: "System {{ "result" }} has gateway {{ "ansible_default_ipv4.gateway "}}"
+-name: play2 and tasks1
+  hosts: web
+  tasks:
+  - name: printing the play2 messange
+    ansible.builtin.debug:
+      msg: "Hi iam play2 and tasks 1"
+
