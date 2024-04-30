@@ -11,3 +11,20 @@
       name: nginx
       state: started
       enabled: yes
+  - name: ensure apache is at the latest version
+      yum:
+        name: httpd
+        state: latest
+  - name: ensure apache is running
+      service:
+        name: httpd
+        state: started    
+  # - name: install alfresco
+  #   ansible.builtin.dnf:
+  #     name: nginx 
+  #     state: latest
+  # - name: start nginx
+  #   ansible.builtin.service:
+  #     name: nginx
+  #     state: started
+  #     enabled: yes
