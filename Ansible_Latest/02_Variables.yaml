@@ -1,0 +1,16 @@
+- name: This is for to test the vaiables in yaml file 
+  hosts: localhost
+  vars: 
+    User: "Hari krishna"
+    Course: "Devops"
+    Age: 41
+  tasks:
+  - name: printing the local one variables
+    ansible.builtin.debug:
+      msg: "printing the first varaible{{User}}"
+  - name: prinitng the local second varible
+    ansible.bulitin.debug: 
+      msg: "printing the second variable{{Course}}"  
+  - name: prinitng the local third varible
+    ansible.bulitin.debug: 
+      msg: "printing the third variable{{Age}}"  
