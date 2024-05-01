@@ -19,7 +19,7 @@
     become_method: sudo
     register: output_useradd
     ignore_errors: true
-    - name: printing the regsiter
+  - name: printing the regsiter
     debug:
       msg: "printing the error {{output_useradd}}"  
 
@@ -30,6 +30,6 @@
     become: yes
     register: output_upgrade
     ignore_errors: true
-    - name: printing the regsiter
+  - name: printing the regsiter
     debug:
       msg: "printing the error {{output_upgrade}}" 
