@@ -20,9 +20,9 @@
   hosts: localhost
   vars: 
     - List1:
-      "aakarsh"
-      "karanam"
-      "kumari sireesha"
+      - "aakarsh"
+      - "karanam"
+      - "kumari sireesha"
   tasks:
   - name: printing the local one variables
     debug:
