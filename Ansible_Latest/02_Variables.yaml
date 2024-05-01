@@ -16,3 +16,16 @@
   - name: prinitng the local third varible
     debug: 
       msg: "printing the third variable{{Age}}"  
+- name: This is for to test the vaiables of list in yaml file 
+  hosts: localhost
+  vars: 
+    - List1:
+      "aakarsh"
+      "karanam"
+      "kumari sireesha"
+  tasks:
+  - name: printing the local one variables
+    debug:
+      msg: "printing the first varaible{{List1}}"
+
+
