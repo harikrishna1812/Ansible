@@ -28,4 +28,16 @@
     debug:
       msg: "printing the first varaible{{List1}}"
 
+- name: This is for to test the vaiables of list in yaml file 
+  hosts: localhost
+  vars: 
+    map1:
+      Son: "aakarsh"
+      Surname: "karanam"
+      wife: "kumari sireesha"
+  tasks:
+  - name: printing the local one variables
+    debug:
+      msg: "printing the first varaible{{map1}}"
+
 
