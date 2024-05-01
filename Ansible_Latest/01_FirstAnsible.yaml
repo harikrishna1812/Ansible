@@ -1,7 +1,37 @@
-- name: this is the first ansible yaml file 
+- name: this is the first play book  ansible yaml file 
   hosts: localhost
   tasks:
   - name: printing the mesage
     ansible.builtin.debug:
-      msg: "this is the program where we are trying the first"
+      msg: "this is the program first playbook program "
+- name: this is the Second play book ansible yaml file 
+  hosts: localhost
+  tasks:
+  - name: printing the mesage
+    ansible.builtin.debug:
+      msg: "this is the program Second playbook program"
+- name: this is the third play book ansible yaml file 
+  hosts: localhost
+  tasks:
+  - name: printing the mesage
+    ansible.builtin.debug:
+      msg: "this is the program third playbook program"
+- name: this is the fourth play book ansible yaml file 
+  hosts: localhost
+  tasks:
+  - name: printing the mesage
+    ansible.builtin.debug:
+      msg: "this is the program fourth playbook program"
+- name: this is the fifth play book ansible yaml file 
+  hosts: localhost
+  tasks:
+  - name: printing the mesage
+    ansible.builtin.debug:
+      msg: "this is the program fifth playbook program"
+- name: this is the sixth play book ansible yaml file 
+  hosts: localhost
+  tasks:
+  - name: printing the mesage
+    ansible.builtin.debug:
+      msg: "this is the program fifth playbook program"
       
