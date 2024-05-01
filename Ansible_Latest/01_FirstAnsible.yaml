@@ -1,6 +1,6 @@
 - name: this is the first ansible yaml file 
   hosts: localhost
-  task:
+  tasks:
   - name: printing the mesage
     ansible.builtin.debug:
       msg: "this is the program where we are trying the first"
