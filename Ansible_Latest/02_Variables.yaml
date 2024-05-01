@@ -13,6 +13,6 @@
     debug: 
       msg: "printing the second variable{{Course}}"  
        
-  # - name: prinitng the local third varible
-  #   ansible.bulitin.debug: 
-  #     msg: "printing the third variable{{Age}}"  
+  - name: prinitng the local third varible
+    debug: 
+      msg: "printing the third variable{{Age}}"  
