@@ -17,9 +17,19 @@
       name: bob
     become: yes
     become_method: sudo
+    register: output_useradd
+    ignore_errors: true
+    - name: printing the regsiter
+    debug:
+      msg: "printing the error {{output_useradd}}"  
 
   - name: Upgrade all apt packages
     apt:
       force_apt_get: yes
       upgrade: dist
     become: yes
+    register: output_upgrade
+    ignore_errors: true
+    - name: printing the regsiter
+    debug:
+      msg: "printing the error {{output_upgrade}}" 
