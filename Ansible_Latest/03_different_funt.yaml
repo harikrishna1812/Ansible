@@ -7,6 +7,7 @@
       dest: /tmp/hosts_backup
       mode: '0644'
     register: output_copy
+    ignore_errors: true
   - name: printing the regsiter
     debug:
       msg: "printing the error {{output_copy}}"
