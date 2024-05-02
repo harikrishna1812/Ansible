@@ -2,10 +2,10 @@
   hosts: DB
   vars:
   tasks:
-    - name: installing the mysql 
-      ansible.builtin.dnf:
-        - name: mysqld
-        - state: latest
-    - name: printing the installed message
-      debug:
-        msg: "mysqld installed"
+  - name: installing the mysql 
+    ansible.builtin.dnf:
+      - name: mysqld
+      - state: latest
+  - name: printing the installed message
+    debug:
+      msg: "mysqld installed"
