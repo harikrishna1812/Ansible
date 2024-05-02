@@ -9,5 +9,3 @@
     - name: printing the installed message
       debug:
         msg: "mysqld installed"
-        
-        -
