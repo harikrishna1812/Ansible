@@ -1,5 +1,5 @@
 - name: Ansible register Module example -1
-  hosts: localhosts
+  hosts: localhost
   become: true
   tasks:
     - name: starting vsftpd
