@@ -6,6 +6,14 @@
     ansible.builtin.dnf:
       name: mysql-server
       state: latest
+  - name: mysqld enable service
+    ansible.builtin.service:
+      name: mysqld
+      enabled: yes
+  - name: mysqld enable service
+    ansible.builtin.service:
+      name: mysqld
+      state: started
   - name: printing the installed message
     debug:
-      msg: "mysqld installed"
+      msg: "mysqld istarted"
