@@ -30,6 +30,7 @@
   - name: printing the db server cmd output
     debug: 
       msg: "printing the output {{MySql-db-data}}"
+      
   - name: verifying the service is running or not 
     debug:
       msg: "mysqld istarted"
