@@ -14,6 +14,14 @@
     ansible.builtin.service:
       name: mysqld
       state: started
-  - name: printing the installed message
+  - name: Get Service Status
+    ansible.builtin.systemd:
+      name: mysqld
+    register: pg_service_status
+  - debug:
+    var: pg_service_status.status.ActiveState
+
+
+  - name: verifying the service is running or not 
     debug:
       msg: "mysqld istarted"
