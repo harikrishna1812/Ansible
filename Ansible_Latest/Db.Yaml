@@ -18,14 +18,14 @@
       state: started
       enabled: yes
 
-  - name: Collect all info except settings and users by root
-    community.mysql.mysql_info:
-      login_user: root
-      login_password: ExpenseApp@1
-      login_host: "{{db_Server}}"
-      filter: version
-    ignore_errors: yes
-    register: MySql-db-data
+  # - name: Collect all info except settings and users by root
+  #   community.mysql.mysql_info:
+  #     login_user: root
+  #     login_password: ExpenseApp@1
+  #     login_host: "{{db_Server}}"
+  #     filter: version
+  #   ignore_errors: yes
+  #   register: MySql-db-data
 
   - name: printing the db server cmd output
     debug: 
