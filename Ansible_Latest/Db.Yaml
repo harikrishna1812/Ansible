@@ -5,7 +5,7 @@
     - name: installing the mysql 
       ansible.builtin.dnf:
         -name: mysqld
-        -state: installed
+        -state: latest
     - name: printing the installed message
       debug:
         msg: "mysqld installed"
