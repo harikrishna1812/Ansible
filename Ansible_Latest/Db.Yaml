@@ -4,7 +4,7 @@
   tasks:
   - name: installing the mysql 
     ansible.builtin.dnf:
-      name: mysqld
+      name: mysql-server
       state: latest
   - name: printing the installed message
     debug:
