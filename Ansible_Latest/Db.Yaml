@@ -1,7 +1,7 @@
 - name: setting up db server 
   hosts: DB
   vars:
-    passwd_root: ExpenseApp@1
+    #passwd_root: ExpenseApp@1
     db_server: 172.31.19.33
   tasks:
   - name: installing the mysql 
