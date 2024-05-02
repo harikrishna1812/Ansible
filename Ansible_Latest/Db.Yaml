@@ -1,6 +1,7 @@
 - name: setting up db server 
   hosts: DB
   vars:
+    passwd_root: ExpenseApp@1
   tasks:
   - name: installing the mysql 
     ansible.builtin.dnf:
@@ -10,17 +11,16 @@
     ansible.builtin.service:
       name: mysqld
       enabled: yes
-  - name: mysqld enable service
+  - name: mysqld start service
     ansible.builtin.service:
       name: mysqld
       state: started
       enabled: yes
-  # - name: Get Service Status
-  #   ansible.builtin.systemd:
-  #     name: mysqld
-  #   register: pg_service_status
-  #   debug:
-  #     msg: pg_service_status.status.ActiveState
+
+- name: Set password for root
+  ansible.builtin.user:
+    name: root
+    password: "{{passwd_root}}"
 
 
   - name: verifying the service is running or not 
