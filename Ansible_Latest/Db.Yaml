@@ -17,10 +17,10 @@
       state: started
       enabled: yes
 
-- name: Set password for root
-  ansible.builtin.user:
-    name: root
-    password: "{{passwd_root}}"
+  - name: Set password for root
+    ansible.builtin.user:
+      name: root
+      password: "{{passwd_root}}"
 
 
   - name: verifying the service is running or not 
