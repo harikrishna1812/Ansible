@@ -1,8 +1,7 @@
 - name: setting up db server 
   hosts: DB
   vars:
-    #passwd_root: ExpenseApp@1
-    db_server: 172.31.19.33
+    db_server: 172.31.30.67
   tasks:
   - name: installing the mysql 
     ansible.builtin.dnf:
@@ -18,14 +17,14 @@
       state: started
       enabled: yes
 
-  # - name: Collect all info except settings and users by root
-  #   community.mysql.mysql_info:
-  #     login_user: root
-  #     login_password: ExpenseApp@1
-  #     login_host: "{{db_Server}}"
-  #     filter: version
-  #   ignore_errors: yes
-  #   register: MySql-db-data
+  - name: Collect all info except settings and users by root
+    community.mysql.mysql_info:
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: "{{ db_server }}"
+      filter: version
+    ignore_errors: yes
+    register: MySql-db-data
 
   - name: printing the db server cmd output
     debug: 
