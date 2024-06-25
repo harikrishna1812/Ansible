@@ -3,8 +3,10 @@
   tasks: 
     - name: now start installing the nginx
       ansible.builtin.package:
+    - name: Make sure the current version of ‘sysstat’ is installed.
+      dnf:
         name: nginx
-        state: present
+        state: latest
       become: yes
       become_method: enable
       become_user: root  
