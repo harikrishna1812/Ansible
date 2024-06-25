@@ -1,4 +1,5 @@
 - name: key valus pair print
+  hosts: localhost
   vars:
     users:
       alice:
