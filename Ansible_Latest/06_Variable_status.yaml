@@ -1,12 +1,12 @@
 - name: this is the first step
   hosts: localhost 
   variables: 
-    - emloyee_names:
-        Hari krishna
-        Aakarsh
+    emloyee_names:
+      -Hari krishna
+      - Aakarsh
         
   tasks: 
     - name: first printing
       ansible.builtin.debug:
-        msg: "employee name is  {{item}} "
+        msg: "employee name is  {{emloyee_names}} "
         #msg: "this is the program first playbook program "
