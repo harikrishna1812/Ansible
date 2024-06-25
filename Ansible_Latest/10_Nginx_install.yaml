@@ -1,6 +1,6 @@
 - name: Instaallation of nginx app
-    tasks: 
-      - name: now start installing the nginx
-          ansible.builtin.package:
-          name: nginx
-          state: present
+  tasks: 
+    - name: now start installing the nginx
+        ansible.builtin.package:
+        name: nginx
+        state: present
