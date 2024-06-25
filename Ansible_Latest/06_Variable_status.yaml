@@ -3,7 +3,7 @@
   variables: 
     emloyee_names:
       -Hari krishna
-      - Aakarsh
+      -Aakarsh
         
   tasks: 
     - name: first printing
