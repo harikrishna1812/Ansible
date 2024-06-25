@@ -1,4 +1,5 @@
 - name: Instaallation of nginx app
+  hosts: localhost
   tasks: 
     - name: now start installing the nginx
       ansible.builtin.package:
