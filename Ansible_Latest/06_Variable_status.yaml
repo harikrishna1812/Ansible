@@ -4,9 +4,9 @@
     - emloyee_names:
         "Hari krishna"
         "Aakarsh"
-         "sirisha"
-         "Krishna"
-         "Karanam"
+        "sirisha"
+        "Krishna"
+        "Karanam"
   tasks: 
     - name: first printing
       ansible.builtin.debug:
