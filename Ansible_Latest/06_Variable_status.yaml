@@ -1,4 +1,4 @@
-- name: 
+- name: this is the first step
   hosts: localhost 
   variables: 
     inventory_hostname: "Hari krishna ansible"
