@@ -5,6 +5,6 @@
   #   ansible_default_ipv4: "192.103.82.10"
   tasks: 
     - name: first printing
-      ansible.builtin.debug module:
+      ansible.builtin.debug:
       #msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4 }}"
         msg: "this is the program first playbook program "
