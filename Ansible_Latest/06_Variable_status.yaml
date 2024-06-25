@@ -3,7 +3,7 @@
   # variables: 
   #   inventory_hostname: "Hari krishna ansible"
   #   ansible_default_ipv4: "192.103.82.10"
-  task: 
+  tasks: 
     name: first printing
     ansible.builtin.debug module:
       msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4 }}
