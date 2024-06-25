@@ -3,9 +3,7 @@
   become: yes
   #become_method: su
   tasks: 
-    - name: now start installing the nginx
-      ansible.builtin.package:
-    - name: Make sure the current version of ‘sysstat’ is installed.
+    - name: Make sure the nginx installation
       dnf:
         name: nginx
         state: latest
