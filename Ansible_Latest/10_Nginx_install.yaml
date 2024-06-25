@@ -1,7 +1,6 @@
 - name: Instaallation of nginx app
     tasks: 
       - name: now start installing the nginx
-        #yum install nginx
-          dnf:
-            name: nginx
-            state: latest
+          ansible.builtin.package:
+          name: nginx
+          state: present
