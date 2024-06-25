@@ -2,11 +2,9 @@
   hosts: localhost 
   variables: 
     - emloyee_names:
-        "Hari krishna"
-        "Aakarsh"
-        "sirisha"
-        "Krishna"
-        "Karanam"
+        Hari krishna
+        Aakarsh
+        
   tasks: 
     - name: first printing
       ansible.builtin.debug:
