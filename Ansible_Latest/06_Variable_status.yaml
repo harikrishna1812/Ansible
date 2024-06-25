@@ -1,10 +1,14 @@
 - name: this is the first step
   hosts: localhost 
-  # variables: 
-  #   inventory_hostname: "Hari krishna ansible"
-  #   ansible_default_ipv4: "192.103.82.10"
+  variables: 
+    - emloyee_names:
+        "Hari krishna"
+        "Aakarsh"
+         "sirisha"
+         "Krishna"
+         "Karanam"
   tasks: 
     - name: first printing
       ansible.builtin.debug:
-      #msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4 }}"
-        msg: "this is the program first playbook program "
+        msg: "employee name is  {{emloyee_names}} "
+        #msg: "this is the program first playbook program "
