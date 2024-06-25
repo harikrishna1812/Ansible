@@ -15,6 +15,6 @@
         #msg: "this is the program first playbook program "
     - name: T04 - Process list using a loop
       ansible.builtin.debug:
-      #  msg: "{{ item }}"
+        msg: "{{ item }}"
       loop: "{{  emloyee_names }}"
     
