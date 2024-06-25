@@ -1,5 +1,8 @@
 - name: Instaallation of nginx app
   hosts: localhost
+  become: yes
+  become_user: root
+  become_method: su
   tasks: 
     - name: now start installing the nginx
       ansible.builtin.package:
@@ -7,6 +10,4 @@
       dnf:
         name: nginx
         state: latest
-      become: yes
-      become_method: enable
-      become_user: root  
+  
