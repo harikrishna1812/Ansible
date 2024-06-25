@@ -2,8 +2,8 @@
   hosts: localhost 
   vars: 
     emloyee_names:
-      -Hari krishna
-      -Aakarsh
+      - Hari krishna
+      - Aakarsh
         
   tasks: 
     - name: first printing
