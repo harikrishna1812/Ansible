@@ -1,4 +1,4 @@
-name: expense
+name: 
 hosts: localhost 
 variables: 
   inventory_hostname: "Hari krishna ansible"
@@ -6,4 +6,4 @@ variables:
 task: 
   name: first printing
   ansible.builtin.debug module:
-  msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4 }}
+    msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4 }}
