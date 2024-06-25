@@ -1,6 +1,6 @@
 - name: this is the first step
   hosts: localhost 
-  variables: 
+  vars: 
     emloyee_names:
       -Hari krishna
       -Aakarsh
