@@ -1,4 +1,3 @@
-- name: just checking the ping 
 - hosts: localhost
   become: true
   tasks:
