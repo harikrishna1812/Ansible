@@ -19,17 +19,6 @@
       service:
         name: nginx
         state: started
-    # - name: Make sure the nginx uninstallation
-    #   dnf:
-    #     name: nginx
-    #     state: absent
-    # - name: Make sure the nginx installation
-    #   dnf:
-    #     name: nginx
-    #     state: latest
-    # - name: start nginx
-    #   service:
-    #     name: nginx
-    #     state: started
+    
 
   
