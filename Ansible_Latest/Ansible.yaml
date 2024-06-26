@@ -1,11 +1,11 @@
 - name: just checking the ping 
 - hosts: localhost
-- tasks: 
-    # - name: Make sure that we can connect to the machine
-    #     ping: google.com
-    - name: Install PHP
-        apt:
-          name=php5-cli 
-          state=present 
-          update_cache=yes
-        become: yes
+- hosts: all
+  become: true
+  tasks:
+    - name: Install required packages
+      apt: name={{item}} state=present update_cache=yes
+      with_items:
+        - php5-cli
+        - nginx
+        - mysql-server-5.6
