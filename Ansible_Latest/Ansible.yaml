@@ -8,5 +8,5 @@
         - nginx
         - mysql-server-5.6
     - name: printing the variables from inventory 
-        ansible.builtin.debug:
+      ansible.builtin.debug:
         msg: "User {{ Hari }} is {{son } ({{ Wife }})"    
