@@ -4,4 +4,7 @@
     # - name: Make sure that we can connect to the machine
     #     ping: google.com
     - name: Install PHP
-        apt: name=php5-cli state=present update_cache=yes
+        apt: 
+          name=php5-cli 
+          state=present 
+          update_cache=yes
