@@ -1,0 +1,5 @@
+...
+- name: just checking the ping 
+- hosts: all
+- tasks: 
+    ping: 
