@@ -1,4 +1,4 @@
 - name: just checking the ping 
-- hosts: all
+- hosts: localhost
 - tasks: 
-    ping: 
+    ping:
