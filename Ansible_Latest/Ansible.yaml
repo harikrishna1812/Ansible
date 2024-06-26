@@ -1,6 +1,5 @@
 - name: just checking the ping 
 - hosts: localhost
-- hosts: all
   become: true
   tasks:
     - name: Install required packages
