@@ -1,13 +1,11 @@
 - name: trying on different
-  
+  hosts: web
   become: yes
   tasks:
-    - name: installing nginix
-      hosts: web
-      - name: install nginx
-        apt: name=nginx state=latest
-      - name: start nginx
-        service:
-          name: nginx
-          state: started
+    - name: install nginx
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
                       
