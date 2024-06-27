@@ -1,8 +1,10 @@
 - name: trying on different
   hosts: web
-  tasks: 
-  - name: installing nginx      
-    ansible.builtin.package:
-    - name: nginx
-      state: present
+  tasks:
+    - name: install nginx
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
                       
