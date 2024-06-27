@@ -1,4 +1,5 @@
-- hosts: localhost
+- name: printing the variables from invntory
+  hosts: localhost
   become: true
   tasks:
     - name: printing the variables from inventory 
