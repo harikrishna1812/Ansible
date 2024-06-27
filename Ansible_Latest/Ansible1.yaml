@@ -1,0 +1,12 @@
+- name: trying on different 
+  tasks: 
+    - name: installing nginx
+      hosts: web
+      ansible.builtin.package:
+      - name: nginx
+        state: present
+    - name: installing nginx
+      hosts: web
+      ansible.builtin.package:
+      - name: nginx
+        state: present
