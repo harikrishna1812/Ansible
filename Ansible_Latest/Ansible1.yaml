@@ -1,8 +1,8 @@
 - name: trying on different
   hosts: web
   tasks: 
-    - name: installing nginx      
-      ansible.builtin.package:
-      - name: nginx
-        state: present
+  - name: installing nginx      
+    ansible.builtin.package:
+    - name: nginx
+      state: present
                       
