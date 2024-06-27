@@ -4,4 +4,4 @@
   tasks:
     - name: printing the variables from inventory 
       ansible.builtin.debug:
-        msg: "User {{ Hari }} is {{son } ({{ Wife }})"    
+        msg: "User {{ Hari }} is {{son }} and {{ Wife }}"    
