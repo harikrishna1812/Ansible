@@ -10,4 +10,16 @@
       ansible.builtin.service:
         name: nginx
         state: started
+- name: trying on different
+  hosts: db
+  become: yes
+  tasks:
+    - name: install nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+    - name: start nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
                       
