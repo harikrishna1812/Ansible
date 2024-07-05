@@ -32,8 +32,8 @@
   
   - name: Install packages based on package.json.
     ansible.builtin.command: npm install
-      args:
-        chdir: /app
+    args:
+      chdir: /app
  - name: Copy using inline content
     ansible.builtin.copy:
       content: '# This file was moved to /etc/other.conf'
