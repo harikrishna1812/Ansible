@@ -2,17 +2,17 @@
   hosts: Backend
   become: yes
   tasks:
-  - name: installing the dependenciew
-    ansible.builtin.pip:
-      name: 
-      - PyMySQL
-      - cryptography
+  # - name: installing the dependenciew
+  #   ansible.builtin.pip:
+  #     name: 
+  #     - PyMySQL
+  #     - cryptography
   - name: disable the nodejs  
     ansible.builtin.dnf:
       name: nodejs 
       state: absent
   - name: Enable service mysqld, and not touch the state
-    ansible.builtin.dnf:
+    ansible.builtin.service:
       name: nodejs:v20
       enabled: yes
   - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
@@ -20,5 +20,5 @@
       name: expense
   - name: Run command for setting the password
     ansible.builtin.command: mkdir /app
-    
+
     
