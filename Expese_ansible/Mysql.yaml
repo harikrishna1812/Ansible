@@ -1,0 +1,18 @@
+- name: setting up the DB server 
+  hosts: DB
+  - tasks: 
+    - name: installing the mysql 
+      ansible.builtin.dnf:
+        name: mysql-server 
+        state: latest
+    - name: enabling the mysql-d
+      - name: Manage a service
+        ansible.builtin.service:
+          name: mysql-server
+          state: started
+          enable: yes
+    - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
+      community.mysql.mysql_db:
+        check_implicit_admin: true
+        login_user: root
+        login_password: ExpenseApp@1
