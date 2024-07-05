@@ -3,7 +3,9 @@
   tasks:
   - name: installing the dependenciew
     ansible.builtin.pip:
-      name: PyMySQL
+      name: 
+      - PyMySQL
+      - cryptography
   - name: installing the mysql 
     ansible.builtin.dnf:
       name: mysql-server 
