@@ -6,14 +6,15 @@
       ansible.builtin.dnf:
         name: nginx
         state: latest
-    - name: install nginx 
-      ansible.builtin.service:
-        name: nginx
-        enabled: true 
-    - name: install nginx 
+    # - name: install nginx 
+    #   ansible.builtin.service:
+    #     name: nginx
+    #     enabled: true 
+    - name: nginx start and enable
       ansible.builtin.service:
         name: nginx
         state: started
+        enabled: true
     - name: remove nginx html files    
       ansible.builtin.file:
         path: /usr/share/nginx/html/*
