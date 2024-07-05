@@ -27,7 +27,7 @@
       loglogin_host: '3.93.17.249' 
       filter: version
       register: mysql_info
-      ignore_errors: yes
+    ignore_errors: yes
 
   - name: printing the messages of DB
     ansible.builtin.debug:
