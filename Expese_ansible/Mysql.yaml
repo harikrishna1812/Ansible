@@ -24,8 +24,10 @@
     community.mysql.mysql_info:
       login_user: root
       login_password: ExpenseApp@1
+      loglogin_host: '3.93.17.249' 
       filter: version
       register: mysql_info
+      ignore_errors: yes
 
   - name: printing the messages of DB
     ansible.builtin.debug:
