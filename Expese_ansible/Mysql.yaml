@@ -31,5 +31,5 @@
 
   - name: printing the messages of DB
     ansible.builtin.debug:
-      msg: log is {{mysql_info}}
+      msg: "log is {{mysql_info}}"
   
