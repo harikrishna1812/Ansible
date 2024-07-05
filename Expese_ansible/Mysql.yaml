@@ -34,4 +34,4 @@
       msg: "log is {{mysql_info}}"
   - name: Run command for setting the password
     ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1
-    when: mysql_info.FAILED! is True 
+    when: mysql_info.failed is True 
