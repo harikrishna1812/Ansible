@@ -1,14 +1,10 @@
 - name: setting up the DB server 
   hosts: DB
-  tasks: 
-  - name: installing the mysql
-    vars:
-      loop:
-       -pymysql
-       -python
-    ansible.builtin.dnf:
-      - name: {{items}} 
-        state: latest
+  tasks:
+  - name: installing the dependenciew
+    ansible.builtin.pip:
+      - name: 
+        -PyMySQL
   - name: installing the mysql 
     ansible.builtin.dnf:
       name: mysql-server 
