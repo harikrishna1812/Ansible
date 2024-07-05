@@ -1,5 +1,6 @@
 - name: setting up the DB server 
   hosts: DB
+  become: yes
   tasks:
   - name: installing the dependenciew
     ansible.builtin.pip:
