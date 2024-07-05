@@ -26,7 +26,8 @@
       login_password: ExpenseApp@1
       filter: version
       register: mysql_info
+
   - name: printing the messages of DB
-    ansible.buildin.debug:
+    ansible.builtin.debug:
       msg: log is {{mysql_info}}
   
