@@ -26,10 +26,12 @@
       login_password: ExpenseApp@1
       loglogin_host: '3.93.17.249' 
       filter: version
-      register: mysql_info
     ignore_errors: yes
-
+    register: mysql_info
+    
   - name: printing the messages of DB
     ansible.builtin.debug:
       msg: "log is {{mysql_info}}"
-  
+  - name: Run command for setting the password
+    ansible.builtin.command: mysql_secure_installation --set-root-pass ExpenseApp@1
+   # when: mysql_info.
