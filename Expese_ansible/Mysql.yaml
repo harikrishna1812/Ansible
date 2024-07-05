@@ -3,8 +3,8 @@
   tasks:
   - name: installing the dependenciew
     ansible.builtin.pip:
-      - name: 
-        -PyMySQL
+      name: 
+      -PyMySQL
   - name: installing the mysql 
     ansible.builtin.dnf:
       name: mysql-server 
