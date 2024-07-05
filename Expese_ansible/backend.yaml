@@ -13,7 +13,7 @@
       state: absent
   - name: Enable service mysqld, and not touch the state
     ansible.builtin.service:
-      name: nodejs:v20
+      name: nodejs:20
       enabled: yes
   - name: Add the user 'johnd' with a specific uid and a primary group of 'admin'
     ansible.builtin.user:
