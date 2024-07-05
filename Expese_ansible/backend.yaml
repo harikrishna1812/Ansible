@@ -35,8 +35,8 @@
     args:
       chdir: /app
 
-#  - name: Copy using inline content
-#     ansible.builtin.copy:
-#       content: '# This file was moved to /etc/other.conf'
-#       dest: /etc/systemd/system/backend.service
+ - name: Copy using inline content
+   ansible.builtin.copy:
+    src: backend.service
+    dest: /etc/systemd/system/backend.service
     
