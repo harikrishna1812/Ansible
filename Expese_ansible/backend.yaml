@@ -33,6 +33,8 @@
   - name: Install packages based on package.json.
     community.general.npm:
       path: /app
+      args:
+        chdir: /app
  - name: Copy using inline content
     ansible.builtin.copy:
       content: '# This file was moved to /etc/other.conf'
