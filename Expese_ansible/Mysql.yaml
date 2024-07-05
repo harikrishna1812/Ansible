@@ -5,11 +5,15 @@
     ansible.builtin.dnf:
       name: mysql-server 
       state: latest
+  - name: Enable service mysqld, and not touch the state
+    ansible.builtin.service:
+      name: mysqld
+      enabled: yes
   - name: enabling the mysql-d
     ansible.builtin.service:
       name: mysqld
       state: started
-      enable: yes
+      
   - name: Try to create database as root/nopassword first. If not allowed, pass the credentials
     community.mysql.mysql_db:
       check_implicit_admin: true
