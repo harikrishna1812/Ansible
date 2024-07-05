@@ -39,4 +39,27 @@
     ansible.builtin.copy:
       src: backend.service
       dest: /etc/systemd/system/backend.service
+
+  - name: starting the backend service
+    ansible.builtin.systemd_service:
+    state: started
+    name: backend
+
+  - name: Enable service httpd and ensure it is not masked
+    ansible.builtin.systemd_service:
+      name: backend
+      enabled: true
+      #masked: no
     
+  - name: install the mysql 
+    ansible.builtin.dnf:
+      name: mysql 
+      state: installed
+
+  - name: Loading the schema
+    ansible.builtin.shell: mysql -h 3.93.17.249 -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
+  - name: Reload service httpd, in all cases
+    ansible.builtin.systemd_service:
+      name: backend
+      state: reloaded
