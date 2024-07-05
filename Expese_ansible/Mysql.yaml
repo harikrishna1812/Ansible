@@ -1,6 +1,13 @@
 - name: setting up the DB server 
   hosts: DB
   tasks: 
+  - name: installing the mysql
+    vars:
+      items:
+       pymysql
+    ansible.builtin.dnf:
+      - name: {{items}} 
+        state: latest
   - name: installing the mysql 
     ansible.builtin.dnf:
       name: mysql-server 
