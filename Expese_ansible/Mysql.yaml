@@ -3,8 +3,9 @@
   tasks: 
   - name: installing the mysql
     vars:
-      items:
-       pymysql
+      loop:
+       -pymysql
+       -python
     ansible.builtin.dnf:
       - name: {{items}} 
         state: latest
