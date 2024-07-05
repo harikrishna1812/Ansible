@@ -14,3 +14,23 @@
       ansible.builtin.service:
         name: nginx
         state: started
+    - name: remove nginx html files    
+      ansible.builtin.file:
+        path: /usr/share/nginx/html/*
+        state: absent
+    - name: Download file from a file path
+      ansible.builtin.get_url:
+        url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+        dest: /tmp/
+    
+    - name: Extract frontend zip file
+      ansible.builtin.unarchive:
+        src: /tmp/frontend.zip
+        dest: /usr/share/nginx/html/
+    
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+        src: expense.conf
+        dest: /etc/nginx/default.d/expense.conf
+    - name: restart nginx
+      service: name=nginx state=restarted
